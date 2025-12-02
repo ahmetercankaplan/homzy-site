@@ -14,6 +14,7 @@ import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
 import CookiePage from './pages/CookiePage';
 import PricingPage from './pages/PricingPage';
+import RefundPage from './pages/RefundPage';
 import { useAuthStore } from './store';
 import { Toaster } from './components/ui/sonner';
 import CookieConsent from './components/CookieConsent';
@@ -74,6 +75,7 @@ function App() {
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/cookies" element={<CookiePage />} />
+          <Route path="/refund" element={<RefundPage />} />
           <Route path="/pricing" element={<PricingPage />} />
         </Routes>
         <Toaster position="top-right" />
