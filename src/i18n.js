@@ -101,6 +101,7 @@ const resources = {
         tagline: 'Find the space you\'ll love living in',
         privacy: 'Privacy Policy',
         terms: 'Terms of Use',
+        refund: 'Refund Policy',
         cookies: 'Cookie Policy',
         rights: 'All rights reserved'
       },
@@ -284,6 +285,7 @@ const resources = {
         tagline: 'Yaşamayı seveceğiniz alanı bulun',
         privacy: 'Gizlilik Politikası',
         terms: 'Kullanım Koşulları',
+        refund: 'İade Politikası',
         cookies: 'Çerez Politikası',
         rights: 'Tüm hakları saklıdır'
       },
@@ -452,6 +454,7 @@ const resources = {
         tagline: 'Trouvez l\'espace dans lequel vous aimerez vivre',
         privacy: 'Politique de confidentialité',
         terms: 'Conditions d\'utilisation',
+        refund: 'Politique de remboursement',
         cookies: 'Politique relative aux cookies',
         rights: 'Tous droits réservés'
       },
@@ -620,6 +623,7 @@ const resources = {
         tagline: 'Finden Sie den Raum, in dem Sie gerne leben werden',
         privacy: 'Datenschutzrichtlinie',
         terms: 'Nutzungsbedingungen',
+        refund: 'Rückerstattungsrichtlinie',
         cookies: 'Cookie-Richtlinie',
         rights: 'Alle Rechte vorbehalten'
       },

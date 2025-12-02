@@ -33,6 +33,9 @@ const Footer = () => {
               <Link to="/terms" data-testid="footer-terms-link" className="block text-gray-400 hover:text-white transition-colors">
                 {t('footer.terms')}
               </Link>
+              <Link to="/refund" className="block text-gray-400 hover:text-white transition-colors">
+                {t('footer.refund', 'Refund Policy')}
+              </Link>
               <Link to="/cookies" data-testid="footer-cookies-link" className="block text-gray-400 hover:text-white transition-colors">
                 {t('footer.cookies')}
               </Link>
