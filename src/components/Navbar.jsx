@@ -114,7 +114,7 @@ const Navbar = () => {
             )}
           </div>
 
-          <div className="flex items-center space-x-3">
+          <div className="hidden md:flex items-center space-x-3">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="outline" size="sm" data-testid="language-selector">
