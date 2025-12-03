@@ -50,22 +50,7 @@ const PricingPage = () => {
   const individualPlans = plans.filter((p) => p.type === 'individual');
   const agentPlans = plans.filter((p) => p.type === 'agent');
 
-  const addonCards = [
-    {
-      name: t('pricing.boost', 'Boost'),
-      price: '£4.99',
-      description: t('pricing.boostDesc', 'Higher ranking in search for 7 days with Boosted badge.'),
-      icon: Zap,
-      addon: 'boost',
-    },
-    {
-      name: t('pricing.spotlight', 'Spotlight'),
-      price: '£14.99',
-      description: t('pricing.spotlightDesc', 'Featured on homepage and city top results for 7 days.'),
-      icon: Star,
-      addon: 'spotlight',
-    },
-  ];
+  const addonCards = [];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-teal-50">
@@ -97,28 +82,30 @@ const PricingPage = () => {
           </div>
         </section>
 
-        <section>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('pricing.addons', 'Add-ons')}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {addonCards.map((addon) => {
-              const Icon = addon.icon;
-              return (
-                <div key={addon.name} className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 flex items-start space-x-4">
-                  <div className="p-3 rounded-xl bg-purple-50 text-purple-600">
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-xl font-bold text-gray-900">{addon.name}</h3>
-                      <span className="text-lg font-semibold text-gray-800">{addon.price}</span>
+        {addonCards.length > 0 && (
+          <section>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('pricing.addons', 'Add-ons')}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {addonCards.map((addon) => {
+                const Icon = addon.icon;
+                return (
+                  <div key={addon.name} className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 flex items-start space-x-4">
+                    <div className="p-3 rounded-xl bg-purple-50 text-purple-600">
+                      <Icon className="w-5 h-5" />
                     </div>
-                    <p className="text-gray-600 text-sm">{addon.description}</p>
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between mb-2">
+                        <h3 className="text-xl font-bold text-gray-900">{addon.name}</h3>
+                        <span className="text-lg font-semibold text-gray-800">{addon.price}</span>
+                      </div>
+                      <p className="text-gray-600 text-sm">{addon.description}</p>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
-        </section>
+                );
+              })}
+            </div>
+          </section>
+        )}
       </div>
       <Footer />
     </div>
