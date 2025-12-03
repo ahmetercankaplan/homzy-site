@@ -58,8 +58,8 @@ const SearchPage = () => {
     <div data-testid="home-page" className="min-h-screen bg-white">
       <Navbar />
 
-      {/* Sticky Filter Bar */}
-      <div className="sticky top-16 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
+      {/* Filter Bar */}
+      <div className="bg-white border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <TopFilterBar onSearch={handleFilterChange} initialFilters={filters} />
         </div>
