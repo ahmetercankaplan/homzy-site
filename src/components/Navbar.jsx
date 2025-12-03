@@ -20,6 +20,7 @@ const Navbar = () => {
   const { user, setUser, logout: logoutStore } = useAuthStore();
   const navigate = useNavigate();
   const devAuthEnabled = process.env.REACT_APP_ENABLE_DEV_LOGIN !== 'false';
+  const [menuOpen, setMenuOpen] = React.useState(false);
 
   const handleLogout = async () => {
     try {
@@ -74,6 +75,16 @@ const Navbar = () => {
               Homzy
             </span>
           </Link>
+
+          <button
+            className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-gray-200 text-gray-700"
+            onClick={() => setMenuOpen((prev) => !prev)}
+            aria-label="Toggle navigation"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
 
           <div className="hidden md:flex items-center space-x-6">
             <Link
@@ -168,6 +179,71 @@ const Navbar = () => {
             )}
           </div>
         </div>
+
+        {/* Mobile menu */}
+        {menuOpen && (
+          <div className="md:hidden mt-2 bg-white border border-gray-200 rounded-xl shadow-lg p-4 space-y-4">
+            <div className="flex flex-col space-y-3">
+              <Link to="/" className="text-gray-700 hover:text-purple-600" onClick={() => setMenuOpen(false)}>
+                {t('nav.home')}
+              </Link>
+              {user && (
+                <Link to="/favorites" className="text-gray-700 hover:text-purple-600" onClick={() => setMenuOpen(false)}>
+                  {t('nav.favorites')}
+                </Link>
+              )}
+              <Link to="/pricing" className="text-gray-700 hover:text-purple-600" onClick={() => setMenuOpen(false)}>
+                Pricing
+              </Link>
+              {user && (
+                <Link to="/dashboard" className="text-gray-700 hover:text-purple-600" onClick={() => setMenuOpen(false)}>
+                  {t('nav.dashboard')}
+                </Link>
+              )}
+            </div>
+            <div className="flex items-center justify-between">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline" size="sm" data-testid="language-selector">
+                    <Globe className="w-4 h-4 mr-2" />
+                    {languages.find(l => l.code === i18n.language)?.label || 'English'}
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  {languages.map((lang) => (
+                    <DropdownMenuItem
+                      key={lang.code}
+                      onClick={() => handleLanguageChange(lang.code)}
+                      data-testid={`lang-${lang.code}`}
+                    >
+                      {lang.label}
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+              {user ? (
+                <Button variant="outline" size="sm" onClick={() => { handleLogout(); setMenuOpen(false); }}>
+                  {t('nav.logout')}
+                </Button>
+              ) : (
+                <Button
+                  onClick={() => {
+                    if (devAuthEnabled) {
+                      handleDevLogin();
+                    } else {
+                      handleGoogleLogin();
+                    }
+                    setMenuOpen(false);
+                  }}
+                  size="sm"
+                  className="bg-gradient-to-r from-purple-500 to-teal-500 hover:from-purple-600 hover:to-teal-600"
+                >
+                  {t('nav.login')}
+                </Button>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );

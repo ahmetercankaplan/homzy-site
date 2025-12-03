@@ -148,7 +148,10 @@ const PlanCard = ({ plan, onChoose }) => {
           </li>
         ))}
       </ul>
-      <Button onClick={() => onChoose(plan.slug)} className="bg-gradient-to-r from-purple-500 to-teal-500 hover:from-purple-600 hover:to-teal-600">
+      <Button
+        onClick={() => onChoose(plan.slug)}
+        className="bg-gradient-to-r from-purple-500 to-teal-500 hover:from-purple-600 hover:to-teal-600 w-full md:w-auto"
+      >
         {t('pricing.choose', 'Choose Plan')}
       </Button>
     </div>
