@@ -15,49 +15,62 @@ const PrivacyPage = () => {
         </div>
 
         <div className="bg-white rounded-2xl shadow-lg p-8 prose prose-lg max-w-none">
-          <p className="text-gray-600 mb-6">Last updated: January 2025</p>
+          <p className="text-gray-600 mb-6">Last updated: [set date]</p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Introduction</h2>
           <p className="text-gray-700 mb-6">
-            Homzy ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect,
-            use, disclose, and safeguard your information when you use our real estate platform.
+            Homzy acts as the data controller. We collect and process personal data to provide and improve our real estate
+            platform in line with GDPR and UK GDPR.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Information We Collect</h2>
-          <p className="text-gray-700 mb-4">We collect information that you provide directly to us, including:</p>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Data We Collect</h2>
           <ul className="list-disc pl-6 text-gray-700 mb-6">
-            <li>Name and contact information (email, phone number)</li>
-            <li>Account credentials</li>
-            <li>Property preferences and search history</li>
-            <li>Viewing requests and communications</li>
+            <li>Account and profile data (name, email, login info).</li>
+            <li>Listing content (property details, photos).</li>
+            <li>Usage data (device, browser, IP, logs).</li>
+            <li>Payment-related metadata via our payment provider (we do not store full card data).</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">3. How We Use Your Information</h2>
-          <p className="text-gray-700 mb-4">We use the information we collect to:</p>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Why We Collect Data (Legal Basis)</h2>
           <ul className="list-disc pl-6 text-gray-700 mb-6">
-            <li>Provide and improve our services</li>
-            <li>Process viewing requests and connect you with agents</li>
-            <li>Send you relevant property listings and updates</li>
-            <li>Analyze usage patterns and improve user experience</li>
+            <li>Provide and improve the service (performance of a contract).</li>
+            <li>Process payments (performance of a contract).</li>
+            <li>Prevent fraud and ensure security (legitimate interest).</li>
+            <li>Send essential service communications (performance of a contract); marketing only with consent where required.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">4. GDPR Compliance</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Sharing</h2>
+          <ul className="list-disc pl-6 text-gray-700 mb-6">
+            <li>Payment processors (e.g., Paddle/Stripe) for billing.</li>
+            <li>Service providers (hosting, analytics) under confidentiality.</li>
+            <li>Legal or compliance requests where required by law.</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">International Transfers</h2>
           <p className="text-gray-700 mb-6">
-            We are committed to complying with the General Data Protection Regulation (GDPR) and UK GDPR. You have the right to
-            access, correct, delete, or restrict the use of your personal data. To exercise these rights, please contact us at
-            privacy@homzy.com.
+            We may transfer data internationally with appropriate safeguards (e.g., SCCs where applicable).
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Data Security</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Data Retention</h2>
           <p className="text-gray-700 mb-6">
-            We implement appropriate technical and organizational measures to protect your personal data against unauthorized
-            access, alteration, disclosure, or destruction.
+            We retain data only as long as needed to provide the service, comply with legal obligations, and resolve disputes.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Contact Us</h2>
-          <p className="text-gray-700">
-            If you have any questions about this Privacy Policy, please contact us at privacy@homzy.com.
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Your Rights</h2>
+          <ul className="list-disc pl-6 text-gray-700 mb-6">
+            <li>Access, rectify, erase, restrict processing, data portability, and object where applicable.</li>
+            <li>Withdraw consent where processing is based on consent.</li>
+            <li>Lodge a complaint with your supervisory authority.</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Cookies & Security</h2>
+          <p className="text-gray-700 mb-6">
+            We use cookies for authentication, security, and basic analytics. Manage preferences via browser settings; some
+            features require essential cookies. We apply reasonable technical and organizational measures to protect data; no
+            system is 100% secure.
           </p>
+
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact</h2>
+          <p className="text-gray-700">privacy@homzy.com</p>
         </div>
       </div>
 
