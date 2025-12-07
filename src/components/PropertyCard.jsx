@@ -17,6 +17,19 @@ const PropertyCard = ({ property }) => {
     }).format(price);
   };
 
+  const pickPhoto = () => {
+    if (property.photos && property.photos.length > 0) {
+      const hash = property.id
+        ? property.id.split('').reduce((acc, ch) => acc + ch.charCodeAt(0), 0)
+        : 0;
+      const index = hash % property.photos.length;
+      return property.photos[index];
+    }
+    return `https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200&auto=format&fit=crop&q=80&sig=${property.id || 'homzy'}`;
+  };
+
+  const mainPhoto = pickPhoto();
+
   return (
     <motion.div
       whileHover={{ y: -4 }}
@@ -26,7 +39,7 @@ const PropertyCard = ({ property }) => {
     >
       <div className="relative aspect-square overflow-hidden">
         <img
-          src={property.photos[0]}
+          src={mainPhoto}
           alt={property.title}
           className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
         />

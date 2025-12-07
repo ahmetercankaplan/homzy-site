@@ -74,6 +74,7 @@ const ListingForm = ({ editingListing, onSuccess, onCancel, publishDisabled = fa
     pets_allowed: false,
     parking: false,
     balcony_garden: false,
+    student_friendly: false,
     availability_date: '',
     energy_rating: '',
     features: []
