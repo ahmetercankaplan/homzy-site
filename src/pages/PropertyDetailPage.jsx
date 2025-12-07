@@ -327,7 +327,7 @@ const PropertyDetailPage = () => {
                     </DialogHeader>
                     <form onSubmit={handleViewingRequest} className="space-y-4">
                       <div>
-                        <Label htmlFor="name">Name</Label>
+                        <Label htmlFor="name">{t('listingForm.name', 'Name')}</Label>
                         <Input
                           id="name"
                           value={viewingForm.name}
@@ -337,7 +337,7 @@ const PropertyDetailPage = () => {
                         />
                       </div>
                       <div>
-                        <Label htmlFor="email">Email</Label>
+                        <Label htmlFor="email">{t('listingForm.email', 'Email')}</Label>
                         <Input
                           id="email"
                           type="email"
@@ -348,7 +348,7 @@ const PropertyDetailPage = () => {
                         />
                       </div>
                       <div>
-                        <Label htmlFor="phone">Phone</Label>
+                        <Label htmlFor="phone">{t('listingForm.phone', 'Phone')}</Label>
                         <Input
                           id="phone"
                           value={viewingForm.phone}
@@ -358,7 +358,7 @@ const PropertyDetailPage = () => {
                         />
                       </div>
                       <div>
-                        <Label htmlFor="date">Preferred Date</Label>
+                        <Label htmlFor="date">{t('listingForm.preferredDate', 'Preferred Date')}</Label>
                         <Input
                           id="date"
                           type="date"
@@ -368,7 +368,7 @@ const PropertyDetailPage = () => {
                         />
                       </div>
                       <div>
-                        <Label htmlFor="message">Message</Label>
+                        <Label htmlFor="message">{t('listingForm.message', 'Message')}</Label>
                         <Textarea
                           id="message"
                           value={viewingForm.message}

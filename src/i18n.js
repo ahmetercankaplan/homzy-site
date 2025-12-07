@@ -14,7 +14,7 @@ const resources = {
         dashboard: 'Dashboard'
       },
       hero: {
-        title: 'Find the space you\'ll love living in',
+        title: "Find the space you'll love living in",
         subtitle: 'Discover your perfect home across the UK and Europe',
         searchPlaceholder: 'Location, postcode, or address',
         minPrice: 'Min Price',
@@ -43,7 +43,7 @@ const resources = {
         unfurnished: 'Unfurnished',
         petsAllowed: 'Pets Allowed',
         parking: 'Parking',
-        balcony: 'Balcony/Garden',
+        balconyGarden: 'Balcony/Garden',
         energyRating: 'Energy Rating',
         available: 'Available from',
         requestViewing: 'Request Viewing',
@@ -58,7 +58,7 @@ const resources = {
       pricing: {
         title: 'Plans & Pricing',
         headline: 'Choose the plan that fits you',
-        subtitle: 'Upgrade anytime. Cancel anytime. Boost and Spotlight are one-off add-ons for extra visibility.',
+        subtitle: 'Upgrade anytime. Cancel anytime.',
         individual: 'For Individuals',
         agents: 'For Agents & Agencies',
         addons: 'Add-ons',
@@ -85,7 +85,8 @@ const resources = {
         parking: 'Parking',
         balconyGarden: 'Balcony/Garden',
         clearAll: 'Clear All',
-        apply: 'Apply Filters'
+        apply: 'Apply Filters',
+        studentFriendly: 'Student Friendly'
       },
       favorites: {
         title: 'My Favorites',
@@ -98,7 +99,7 @@ const resources = {
         signInDesc: 'Sign in to save favorites and manage viewings'
       },
       footer: {
-        tagline: 'Find the space you\'ll love living in',
+        tagline: "Find the space you'll love living in",
         privacy: 'Privacy Policy',
         terms: 'Terms of Use',
         refund: 'Refund Policy',
@@ -147,7 +148,13 @@ const resources = {
         cancel: 'Cancel',
         create: 'Create Listing',
         update: 'Update Listing',
-        submitting: 'Saving...'
+        submitting: 'Saving...',
+        name: 'Name',
+        email: 'Email',
+        phone: 'Phone',
+        preferredDate: 'Preferred Date',
+        message: 'Message',
+        student: 'Student Friendly'
       },
       validation: {
         required: 'Required',
@@ -211,11 +218,11 @@ const resources = {
         viewAll: 'Tümünü Gör'
       },
       howItWorks: {
-        title: 'Nasıl Çalışır',
+        title: 'Nasıl çalışır',
         step1: 'Ara',
-        step1Desc: 'Binlerce gayrimenkulu inceleyin',
+        step1Desc: 'Binlerce gayrimenkulü inceleyin',
         step2: 'Gör',
-        step2Desc: 'Size uygun görüşme rezervasyonu yapın',
+        step2Desc: 'Size uygun görüşmeyi ayarlayın',
         step3: 'İletişim',
         step3Desc: 'Acentelerle doğrudan bağlantı kurun'
       },
@@ -227,7 +234,7 @@ const resources = {
         unfurnished: 'Mobilyasız',
         petsAllowed: 'Evcil Hayvan İzni',
         parking: 'Otopark',
-        balcony: 'Balkon/Bahçe',
+        balconyGarden: 'Balkon/Bahçe',
         energyRating: 'Enerji Sınıfı',
         available: 'Müsait tarih',
         requestViewing: 'Görüşme Talep Et',
@@ -238,6 +245,21 @@ const resources = {
         description: 'Açıklama',
         location: 'Konum',
         nearby: 'Yakında'
+      },
+      pricing: {
+        title: 'Planlar ve Fiyatlar',
+        headline: 'Size uygun planı seçin',
+        subtitle: 'İstediğiniz zaman yükseltin veya iptal edin.',
+        individual: 'Bireysel',
+        agents: 'Emlakçılar ve Ajanslar',
+        addons: 'Eklentiler',
+        boost: 'Boost',
+        boostDesc: '7 gün boyunca aramada daha üst sıralar, Boosted etiketi.',
+        spotlight: 'Spotlight',
+        spotlightDesc: '7 gün boyunca ana sayfa ve şehir aramasında öne çıkma.',
+        maxListings: 'Maksimum aktif ilan',
+        unlimited: 'Sınırsız',
+        choose: 'Planı Seç'
       },
       filters: {
         filters: 'Filtreler',
@@ -254,22 +276,8 @@ const resources = {
         parking: 'Otopark',
         balconyGarden: 'Balkon/Bahçe',
         clearAll: 'Temizle',
-        apply: 'Filtreleri Uygula'
-      },
-      pricing: {
-        title: 'Planlar ve Fiyatlar',
-        headline: 'Size uygun planı seçin',
-        subtitle: 'İstediğiniz zaman yükseltin veya iptal edin. Boost ve Spotlight ekstra görünürlük için tek seferlik eklentilerdir.',
-        individual: 'Bireysel',
-        agents: 'Emlakçılar ve Ajanslar',
-        addons: 'Eklentiler',
-        boost: 'Boost',
-        boostDesc: '7 gün boyunca aramada daha üst sıralar, Boosted etiketi.',
-        spotlight: 'Spotlight',
-        spotlightDesc: '7 gün boyunca ana sayfa ve şehir aramasında öne çıkma.',
-        maxListings: 'Maksimum aktif ilan',
-        unlimited: 'Sınırsız',
-        choose: 'Planı Seç'
+        apply: 'Filtreleri Uygula',
+        studentFriendly: 'Öğrenci Dostu'
       },
       favorites: {
         title: 'Favorilerim',
@@ -299,7 +307,7 @@ const resources = {
         deletedSuccess: 'İlan başarıyla silindi',
         areYouSureDelete: 'Bu ilanı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.',
         noListings: 'Henüz ilan yok',
-        addFirstListing: 'Başlamak için ilk gayrimenkul ilanınızı oluşturun'
+        addFirstListing: 'Başlamak için ilk ilanınızı oluşturun'
       },
       listingForm: {
         details: 'Detaylar',
@@ -322,7 +330,7 @@ const resources = {
         features: 'Özellikler',
         photos: 'Gayrimenkul Fotoğrafları',
         floorplan: 'Kat Planı',
-        uploadPhotos: 'Fotoğrafları sürükleyip bırakın veya göz atmak için tıklayın',
+        uploadPhotos: 'Fotoğrafları sürükleyip bırakın veya tıklayın',
         dropPhotos: 'Fotoğrafları buraya bırakın',
         addFloorplan: 'Kat planı ekle (PDF veya resim)',
         dropFloorplan: 'Kat planını buraya bırakın',
@@ -331,7 +339,13 @@ const resources = {
         cancel: 'İptal',
         create: 'İlan Oluştur',
         update: 'İlanı Güncelle',
-        submitting: 'Kaydediliyor...'
+        submitting: 'Kaydediliyor...',
+        name: 'İsim',
+        email: 'E-posta',
+        phone: 'Telefon',
+        preferredDate: 'Tercih Edilen Tarih',
+        message: 'Mesaj',
+        student: 'Öğrenci Dostu'
       },
       validation: {
         required: 'Gerekli',
@@ -367,7 +381,7 @@ const resources = {
         petFriendly: 'Evcil Hayvan Dostu',
         newBuild: 'Sıfır',
         highEPC: 'Yüksek EPC',
-        studentFriendly: 'Öğrenciye uygun'
+        studentFriendly: 'Öğrenci Dostu'
       }
     }
   },
@@ -382,9 +396,9 @@ const resources = {
         dashboard: 'Tableau de bord'
       },
       hero: {
-        title: 'Trouvez l\'espace dans lequel vous aimerez vivre',
+        title: 'Trouvez l’espace où vous aimerez vivre',
         subtitle: 'Découvrez votre maison idéale au Royaume-Uni et en Europe',
-        searchPlaceholder: 'Lieu, code postal ou adresse',
+        searchPlaceholder: 'Ville, code postal ou adresse',
         minPrice: 'Prix min',
         maxPrice: 'Prix max',
         bedrooms: 'Chambres',
@@ -401,7 +415,7 @@ const resources = {
         step2: 'Voir',
         step2Desc: 'Réservez une visite qui vous convient',
         step3: 'Contacter',
-        step3Desc: 'Connectez-vous directement avec les agents'
+        step3Desc: 'Contactez directement les agents'
       },
       property: {
         perMonth: 'par mois',
@@ -411,17 +425,32 @@ const resources = {
         unfurnished: 'Non meublé',
         petsAllowed: 'Animaux acceptés',
         parking: 'Parking',
-        balcony: 'Balcon/Jardin',
+        balconyGarden: 'Balcon/Jardin',
         energyRating: 'Classe énergétique',
         available: 'Disponible à partir de',
         requestViewing: 'Demander une visite',
-        contactAgent: 'Contacter l\'agent',
+        contactAgent: 'Contacter l’agent',
         saveToFavorites: 'Ajouter aux favoris',
         share: 'Partager',
         features: 'Caractéristiques',
         description: 'Description',
         location: 'Emplacement',
         nearby: 'À proximité'
+      },
+      pricing: {
+        title: 'Plans et tarifs',
+        headline: 'Choisissez le plan qui vous convient',
+        subtitle: 'Changez ou annulez à tout moment.',
+        individual: 'Pour les particuliers',
+        agents: 'Pour les agents et agences',
+        addons: 'Options',
+        boost: 'Boost',
+        boostDesc: 'Meilleur classement pendant 7 jours avec badge Boosted.',
+        spotlight: 'Spotlight',
+        spotlightDesc: 'Mise en avant sur la page d’accueil et en haut des recherches pendant 7 jours.',
+        maxListings: 'Nombre maximum d’annonces actives',
+        unlimited: 'Illimité',
+        choose: 'Choisir ce plan'
       },
       filters: {
         filters: 'Filtres',
@@ -438,22 +467,23 @@ const resources = {
         parking: 'Parking',
         balconyGarden: 'Balcon/Jardin',
         clearAll: 'Tout effacer',
-        apply: 'Appliquer les filtres'
+        apply: 'Appliquer',
+        studentFriendly: 'Adapté aux étudiants'
       },
       favorites: {
         title: 'Mes favoris',
         empty: 'Aucun favori pour le moment',
-        emptyDesc: 'Commencez à enregistrer des propriétés pour les voir ici'
+        emptyDesc: 'Ajoutez des propriétés pour les voir ici'
       },
       auth: {
         signIn: 'Se connecter avec Google',
-        signInTitle: 'Bienvenue chez Homzy',
+        signInTitle: 'Bienvenue sur Homzy',
         signInDesc: 'Connectez-vous pour enregistrer des favoris et gérer les visites'
       },
       footer: {
-        tagline: 'Trouvez l\'espace dans lequel vous aimerez vivre',
+        tagline: 'Trouvez l’espace dans lequel vous aimerez vivre',
         privacy: 'Politique de confidentialité',
-        terms: 'Conditions d\'utilisation',
+        terms: 'Conditions d’utilisation',
         refund: 'Politique de remboursement',
         cookies: 'Politique relative aux cookies',
         rights: 'Tous droits réservés'
@@ -462,13 +492,13 @@ const resources = {
         title: 'Mon Tableau de Bord',
         myListings: 'Mes Annonces',
         addListing: 'Ajouter une Annonce',
-        editListing: 'Modifier l\'Annonce',
+        editListing: 'Modifier l’Annonce',
         createdSuccess: 'Annonce créée avec succès',
         updatedSuccess: 'Annonce mise à jour avec succès',
         deletedSuccess: 'Annonce supprimée avec succès',
-        areYouSureDelete: 'Êtes-vous sûr de vouloir supprimer cette annonce ? Cette action ne peut pas être annulée.',
+        areYouSureDelete: 'Êtes-vous sûr de vouloir supprimer cette annonce ? Cette action est irréversible.',
         noListings: 'Aucune annonce pour le moment',
-        addFirstListing: 'Créez votre première annonce immobilière pour commencer'
+        addFirstListing: 'Créez votre première annonce pour commencer'
       },
       listingForm: {
         details: 'Détails',
@@ -486,21 +516,27 @@ const resources = {
         size: 'Surface (m²)',
         propertyType: 'Type de Bien',
         furnished: 'Meublé',
-        availabilityDate: 'Disponible à Partir de',
-        energyRating: 'Classe Énergétique',
+        availabilityDate: 'Disponible à partir de',
+        energyRating: 'Classe énergétique',
         features: 'Caractéristiques',
-        photos: 'Photos de la Propriété',
-        floorplan: 'Plan d\'Étage',
-        uploadPhotos: 'Glissez-déposez des photos ou cliquez pour parcourir',
+        photos: 'Photos du Bien',
+        floorplan: 'Plan',
+        uploadPhotos: 'Glissez-déposez ou cliquez pour parcourir',
         dropPhotos: 'Déposez les photos ici',
         addFloorplan: 'Ajouter un plan (PDF ou image)',
         dropFloorplan: 'Déposez le plan ici',
         next: 'Suivant : Photos',
         back: 'Retour',
         cancel: 'Annuler',
-        create: 'Créer l\'Annonce',
+        create: 'Créer l’Annonce',
         update: 'Mettre à Jour',
-        submitting: 'Enregistrement...'
+        submitting: 'Enregistrement...',
+        name: 'Nom',
+        email: 'Email',
+        phone: 'Téléphone',
+        preferredDate: 'Date souhaitée',
+        message: 'Message',
+        student: 'Adapté aux étudiants'
       },
       validation: {
         required: 'Requis',
@@ -511,9 +547,9 @@ const resources = {
         invalidDate: 'Doit être une date valide',
         invalidCurrency: 'Devise invalide',
         imagesRequired: 'Au moins 1 photo est requise',
-        regionNotAllowed: 'Seules les annonces UK & UE sont autorisées',
+        regionNotAllowed: 'Seules les annonces Royaume-Uni & UE sont autorisées',
         fixErrors: 'Veuillez corriger les erreurs avant de soumettre',
-        submitError: 'Échec de l\'enregistrement de l\'annonce'
+        submitError: 'Échec de l’enregistrement de l’annonce'
       },
       filterBar: {
         rent: 'Location',
@@ -535,7 +571,7 @@ const resources = {
         parking: 'Parking',
         petFriendly: 'Animaux Acceptés',
         newBuild: 'Neuf',
-        highEPC: 'EPC Élevé',
+        highEPC: 'EPC élevé',
         studentFriendly: 'Adapté aux étudiants'
       }
     }
@@ -551,9 +587,9 @@ const resources = {
         dashboard: 'Dashboard'
       },
       hero: {
-        title: 'Finden Sie den Raum, in dem Sie gerne leben werden',
+        title: 'Finden Sie den Raum, in dem Sie gerne leben',
         subtitle: 'Entdecken Sie Ihr perfektes Zuhause in Großbritannien und Europa',
-        searchPlaceholder: 'Standort, Postleitzahl oder Adresse',
+        searchPlaceholder: 'Ort, Postleitzahl oder Adresse',
         minPrice: 'Min. Preis',
         maxPrice: 'Max. Preis',
         bedrooms: 'Schlafzimmer',
@@ -567,10 +603,10 @@ const resources = {
         title: 'So funktioniert es',
         step1: 'Suchen',
         step1Desc: 'Durchsuchen Sie Tausende von Immobilien',
-        step2: 'Ansehen',
-        step2Desc: 'Buchen Sie eine Besichtigung, die zu Ihnen passt',
+        step2: 'Besichtigen',
+        step2Desc: 'Buchen Sie eine passende Besichtigung',
         step3: 'Kontakt',
-        step3Desc: 'Verbinden Sie sich direkt mit Maklern'
+        step3Desc: 'Kontaktieren Sie Makler direkt'
       },
       property: {
         perMonth: 'pro Monat',
@@ -580,17 +616,32 @@ const resources = {
         unfurnished: 'Unmöbliert',
         petsAllowed: 'Haustiere erlaubt',
         parking: 'Parkplatz',
-        balcony: 'Balkon/Garten',
+        balconyGarden: 'Balkon/Garten',
         energyRating: 'Energieklasse',
         available: 'Verfügbar ab',
-        requestViewing: 'Besichtigung anfordern',
+        requestViewing: 'Besichtigung anfragen',
         contactAgent: 'Makler kontaktieren',
         saveToFavorites: 'Zu Favoriten hinzufügen',
         share: 'Teilen',
-        features: 'Eigenschaften',
+        features: 'Merkmale',
         description: 'Beschreibung',
         location: 'Standort',
         nearby: 'In der Nähe'
+      },
+      pricing: {
+        title: 'Pläne & Preise',
+        headline: 'Wählen Sie den passenden Tarif',
+        subtitle: 'Upgrade oder Kündigung jederzeit möglich.',
+        individual: 'Für Privatnutzer',
+        agents: 'Für Makler & Agenturen',
+        addons: 'Zusatzoptionen',
+        boost: 'Boost',
+        boostDesc: 'Besseres Ranking 7 Tage lang mit Boosted-Badge.',
+        spotlight: 'Spotlight',
+        spotlightDesc: '7 Tage lang auf Homepage und Stadtsuche hervorgehoben.',
+        maxListings: 'Max. aktive Inserate',
+        unlimited: 'Unbegrenzt',
+        choose: 'Plan wählen'
       },
       filters: {
         filters: 'Filter',
@@ -607,12 +658,13 @@ const resources = {
         parking: 'Parkplatz',
         balconyGarden: 'Balkon/Garten',
         clearAll: 'Alles löschen',
-        apply: 'Filter anwenden'
+        apply: 'Anwenden',
+        studentFriendly: 'Studentenfreundlich'
       },
       favorites: {
         title: 'Meine Favoriten',
         empty: 'Noch keine Favoriten',
-        emptyDesc: 'Beginnen Sie, Immobilien zu speichern, um sie hier zu sehen'
+        emptyDesc: 'Speichern Sie Immobilien, um sie hier zu sehen'
       },
       auth: {
         signIn: 'Mit Google anmelden',
@@ -630,14 +682,14 @@ const resources = {
       dashboard: {
         title: 'Mein Dashboard',
         myListings: 'Meine Inserate',
-        addListing: 'Inserat Hinzufügen',
-        editListing: 'Inserat Bearbeiten',
+        addListing: 'Inserat hinzufügen',
+        editListing: 'Inserat bearbeiten',
         createdSuccess: 'Inserat erfolgreich erstellt',
         updatedSuccess: 'Inserat erfolgreich aktualisiert',
         deletedSuccess: 'Inserat erfolgreich gelöscht',
-        areYouSureDelete: 'Sind Sie sicher, dass Sie dieses Inserat löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.',
+        areYouSureDelete: 'Sind Sie sicher, dass Sie dieses Inserat löschen möchten? Dies kann nicht rückgängig gemacht werden.',
         noListings: 'Noch keine Inserate',
-        addFirstListing: 'Erstellen Sie Ihr erstes Immobilieninserat, um zu beginnen'
+        addFirstListing: 'Erstellen Sie Ihr erstes Inserat, um zu beginnen'
       },
       listingForm: {
         details: 'Details',
@@ -657,19 +709,25 @@ const resources = {
         furnished: 'Möbliert',
         availabilityDate: 'Verfügbar ab',
         energyRating: 'Energieklasse',
-        features: 'Eigenschaften',
+        features: 'Merkmale',
         photos: 'Immobilienfotos',
         floorplan: 'Grundriss',
-        uploadPhotos: 'Fotos per Drag & Drop hochladen oder zum Durchsuchen klicken',
+        uploadPhotos: 'Fotos hochladen oder klicken',
         dropPhotos: 'Fotos hier ablegen',
         addFloorplan: 'Grundriss hinzufügen (PDF oder Bild)',
         dropFloorplan: 'Grundriss hier ablegen',
         next: 'Weiter: Fotos',
         back: 'Zurück',
         cancel: 'Abbrechen',
-        create: 'Inserat Erstellen',
-        update: 'Inserat Aktualisieren',
-        submitting: 'Wird gespeichert...'
+        create: 'Inserat erstellen',
+        update: 'Inserat aktualisieren',
+        submitting: 'Wird gespeichert...',
+        name: 'Name',
+        email: 'E-Mail',
+        phone: 'Telefon',
+        preferredDate: 'Bevorzugtes Datum',
+        message: 'Nachricht',
+        student: 'Studentenfreundlich'
       },
       validation: {
         required: 'Erforderlich',
@@ -681,8 +739,8 @@ const resources = {
         invalidCurrency: 'Ungültige Währung',
         imagesRequired: 'Mindestens 1 Foto ist erforderlich',
         regionNotAllowed: 'Nur UK & EU Inserate sind erlaubt',
-        fixErrors: 'Bitte korrigieren Sie die Fehler vor dem Absenden',
-        submitError: 'Fehler beim Speichern des Inserats'
+        fixErrors: 'Bitte Fehler korrigieren',
+        submitError: 'Speichern fehlgeschlagen'
       },
       filterBar: {
         rent: 'Miete',
