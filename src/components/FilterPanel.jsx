@@ -173,6 +173,17 @@ const FilterPanel = ({ filters, onFilterChange }) => {
               {t('filters.balconyGarden')}
             </label>
           </div>
+          <div className="flex items-center space-x-2">
+            <Checkbox
+              id="student"
+              checked={filters.student_friendly === true}
+              onCheckedChange={(checked) => handleChange('student_friendly', checked ? true : null)}
+              data-testid="filter-student-checkbox"
+            />
+            <label htmlFor="student" className="text-sm cursor-pointer">
+              {t('filters.studentFriendly', 'Student Friendly')}
+            </label>
+          </div>
         </div>
       </div>
     </div>

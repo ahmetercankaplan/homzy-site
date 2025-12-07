@@ -100,6 +100,7 @@ const ListingForm = ({ editingListing, onSuccess, onCancel, publishDisabled = fa
         pets_allowed: editingListing.pets_allowed,
         parking: editingListing.parking,
         balcony_garden: editingListing.balcony_garden,
+        student_friendly: editingListing.student_friendly || false,
         availability_date: editingListing.availability_date,
         energy_rating: editingListing.energy_rating || '',
         features: editingListing.features || []
@@ -561,7 +562,18 @@ const ListingForm = ({ editingListing, onSuccess, onCancel, publishDisabled = fa
                   data-testid="balcony-checkbox"
                 />
                 <label htmlFor="balcony" className="text-sm cursor-pointer">
-                  {t('property.balcony', 'Balcony/Garden')}
+                  {t('property.balconyGarden', 'Balcony/Garden')}
+                </label>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Checkbox
+                  id="student_friendly"
+                  checked={formData.student_friendly}
+                  onCheckedChange={(checked) => handleChange('student_friendly', checked)}
+                  data-testid="student-checkbox"
+                />
+                <label htmlFor="student_friendly" className="text-sm cursor-pointer">
+                  {t('listingForm.student', 'Student Friendly')}
                 </label>
               </div>
             </div>

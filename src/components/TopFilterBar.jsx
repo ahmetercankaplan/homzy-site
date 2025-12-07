@@ -21,6 +21,7 @@ const TopFilterBar = ({ onSearch, initialFilters = {} }) => {
     min_price: '',
     max_price: '',
     location: '',
+    student_friendly: '',
     ...initialFilters
   });
   const [locationInput, setLocationInput] = useState('');

@@ -49,6 +49,13 @@ const QuickChipsRow = ({ filters, onFilterChange }) => {
       icon: Zap,
       filterKey: 'energy_rating',
       value: 'A'
+    },
+    {
+      key: 'student',
+      label: t('quickChips.studentFriendly', 'Student Friendly'),
+      icon: Sofa,
+      filterKey: 'student_friendly',
+      value: true
     }
   ];
 
