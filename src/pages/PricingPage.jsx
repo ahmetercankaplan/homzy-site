@@ -6,26 +6,26 @@ import Footer from '../components/Footer';
 const copyByLocale = {
   en: {
     intro:
-      'Homzy offers digital listing plans for property ads across Europe. We do not sell or broker properties; every plan is a digital service activated after successful payment.',
+      'Homzy offers digital listing plans for property ads across Europe. We do not sell or broker properties; every plan is a digital service activated after successful payment. All prices are shown in EUR.',
     plans: [
       {
         key: 'basic',
         name: 'Basic Plan',
-        price: '£0 / €0',
+        price: '€0',
         duration: '30 days',
         limit: 'Up to 1 active listing',
         features: [
           'Standard placement in search and category results',
           'Basic listing management dashboard',
           'Visibility included during the plan duration',
-          'Support for GBP and EUR billing',
+          'EUR billing',
           'Digital service only; no physical products or brokerage'
         ]
       },
       {
         key: 'premium',
         name: 'Premium Plan',
-        price: '£9.99 / €9.99',
+        price: '€9.99',
         duration: '60 days',
         limit: 'Up to 3 active listings',
         features: [
@@ -39,7 +39,7 @@ const copyByLocale = {
       {
         key: 'professional',
         name: 'Professional Plan',
-        price: '£29.00 / €29.00',
+        price: '€29.00',
         duration: '90 days',
         limit: 'Up to 10 active listings',
         features: [
@@ -53,7 +53,7 @@ const copyByLocale = {
       {
         key: 'unlimited',
         name: 'Pro Unlimited (Subscription)',
-        price: '£59.00 / €59.00 per month',
+        price: '€59.00 / month',
         duration: 'Monthly subscription',
         limit: 'Unlimited active listings during subscription',
         features: [
@@ -68,26 +68,26 @@ const copyByLocale = {
   },
   tr: {
     intro:
-      'Homzy, Avrupa genelinde gayrimenkul ilanları için dijital planlar sunar. Mülk satışı veya aracılık yapmayız; her plan, ödeme sonrası otomatik aktive edilen dijital bir hizmettir.',
+      'Homzy, Avrupa genelinde gayrimenkul ilanları için dijital planlar sunar. Mülk satışı veya aracılık yapmayız; her plan, ödeme sonrası otomatik aktive edilen dijital bir hizmettir. Fiyatlar EUR cinsindendir.',
     plans: [
       {
         key: 'basic',
         name: 'Basic Plan',
-        price: '£0 / €0',
+        price: '€0',
         duration: '30 gün',
         limit: 'En fazla 1 aktif ilan',
         features: [
           'Arama ve kategorilerde standart konum',
           'Temel ilan yönetim paneli',
           'Plan süresi boyunca görünürlük',
-          'GBP ve EUR faturalama desteği',
+          'EUR faturalama',
           'Sadece dijital hizmet; fiziksel ürün veya aracılık yok'
         ]
       },
       {
         key: 'premium',
         name: 'Premium Plan',
-        price: '£9.99 / €9.99',
+        price: '€9.99',
         duration: '60 gün',
         limit: 'En fazla 3 aktif ilan',
         features: [
@@ -101,7 +101,7 @@ const copyByLocale = {
       {
         key: 'professional',
         name: 'Professional Plan',
-        price: '£29.00 / €29.00',
+        price: '€29.00',
         duration: '90 gün',
         limit: 'En fazla 10 aktif ilan',
         features: [
@@ -115,7 +115,7 @@ const copyByLocale = {
       {
         key: 'unlimited',
         name: 'Pro Unlimited (Abonelik)',
-        price: '£59.00 / €59.00 aylık',
+        price: '€59.00 / aylık',
         duration: 'Aylık abonelik',
         limit: 'Abonelik süresince sınırsız aktif ilan',
         features: [
@@ -130,26 +130,26 @@ const copyByLocale = {
   },
   fr: {
     intro:
-      'Homzy propose des plans d annonces numériques pour les annonces immobilières en Europe. Nous ne vendons ni ne courtisons de biens; chaque plan est un service numérique activé après paiement.',
+      'Homzy propose des plans d annonces numériques pour les annonces immobilières en Europe. Nous ne vendons ni ne courtisons de biens; chaque plan est un service numérique activé après paiement. Les prix sont indiqués en EUR.',
     plans: [
       {
         key: 'basic',
         name: 'Plan Basic',
-        price: '£0 / €0',
+        price: '€0',
         duration: '30 jours',
         limit: 'Jusqu’à 1 annonce active',
         features: [
           'Position standard dans les recherches et catégories',
           'Tableau de bord basique de gestion des annonces',
           'Visibilité pendant la durée du plan',
-          'Facturation disponible en GBP et EUR',
+          'Facturation en EUR',
           'Service purement numérique; aucun produit physique ni courtage'
         ]
       },
       {
         key: 'premium',
         name: 'Plan Premium',
-        price: '£9.99 / €9.99',
+        price: '€9.99',
         duration: '60 jours',
         limit: 'Jusqu’à 3 annonces actives',
         features: [
@@ -163,7 +163,7 @@ const copyByLocale = {
       {
         key: 'professional',
         name: 'Plan Professionnel',
-        price: '£29.00 / €29.00',
+        price: '€29.00',
         duration: '90 jours',
         limit: 'Jusqu’à 10 annonces actives',
         features: [
@@ -177,7 +177,7 @@ const copyByLocale = {
       {
         key: 'unlimited',
         name: 'Pro Unlimited (Abonnement)',
-        price: '£59.00 / €59.00 par mois',
+        price: '€59.00 / mois',
         duration: 'Abonnement mensuel',
         limit: 'Annonces actives illimitées pendant l’abonnement',
         features: [
@@ -192,26 +192,26 @@ const copyByLocale = {
   },
   de: {
     intro:
-      'Homzy bietet digitale Anzeigenpläne für Immobilieninserate in Europa an. Wir verkaufen oder vermitteln keine Immobilien; jeder Plan ist ein digitaler Dienst, der nach erfolgreicher Zahlung aktiviert wird.',
+      'Homzy bietet digitale Anzeigenpläne für Immobilieninserate in Europa an. Wir verkaufen oder vermitteln keine Immobilien; jeder Plan ist ein digitaler Dienst, der nach erfolgreicher Zahlung aktiviert wird. Preise werden in EUR angezeigt.',
     plans: [
       {
         key: 'basic',
         name: 'Basic-Plan',
-        price: '£0 / €0',
+        price: '€0',
         duration: '30 Tage',
         limit: 'Bis zu 1 aktives Inserat',
         features: [
           'Standardplatzierung in Suche und Kategorien',
           'Basisches Listing-Management-Dashboard',
           'Sichtbarkeit für die Dauer des Plans',
-          'Abrechnung in GBP und EUR möglich',
+          'Abrechnung in EUR',
           'Nur digitaler Service; keine physischen Produkte oder Maklerleistung'
         ]
       },
       {
         key: 'premium',
         name: 'Premium-Plan',
-        price: '£9.99 / €9.99',
+        price: '€9.99',
         duration: '60 Tage',
         limit: 'Bis zu 3 aktive Inserate',
         features: [
@@ -225,7 +225,7 @@ const copyByLocale = {
       {
         key: 'professional',
         name: 'Professional-Plan',
-        price: '£29.00 / €29.00',
+        price: '€29.00',
         duration: '90 Tage',
         limit: 'Bis zu 10 aktive Inserate',
         features: [
@@ -239,7 +239,7 @@ const copyByLocale = {
       {
         key: 'unlimited',
         name: 'Pro Unlimited (Abo)',
-        price: '£59.00 / €59.00 pro Monat',
+        price: '€59.00 / Monat',
         duration: 'Monatliches Abonnement',
         limit: 'Unbegrenzte aktive Inserate während des Abos',
         features: [
@@ -270,19 +270,19 @@ const PricingPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-teal-50">
       <Navbar />
-      <div className="max-w-6xl mx-auto px-4 py-12 space-y-8">
-        <div className="text-center space-y-3">
+      <div className="max-w-6xl mx-auto px-4 py-12 space-y-10">
+        <div className="text-center space-y-3 max-w-3xl mx-auto">
           <p className="text-sm font-semibold text-purple-700 uppercase tracking-wide">{t('pricing.title')}</p>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">{t('pricing.headline')}</h1>
           <p className="text-gray-600">{t('pricing.subtitle')}</p>
-          <p className="text-sm text-gray-500 max-w-4xl mx-auto leading-relaxed">{copy.intro}</p>
+          <p className="text-sm text-gray-500 leading-relaxed">{copy.intro}</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 xl:grid-cols-4 xl:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {copy.plans.map((plan) => (
             <div
               key={plan.key}
-              className="bg-white rounded-2xl shadow-lg border border-gray-100 p-7 flex flex-col space-y-5"
+              className="bg-white rounded-2xl shadow-lg border border-gray-100 p-7 flex flex-col space-y-5 transition hover:shadow-xl"
             >
               <div className="flex items-baseline justify-between">
                 <h2 className="text-xl font-semibold text-gray-900">{plan.name}</h2>
