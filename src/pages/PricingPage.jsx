@@ -270,19 +270,19 @@ const PricingPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-teal-50">
       <Navbar />
-      <div className="max-w-6xl mx-auto px-4 py-12 space-y-6">
-        <div className="text-center space-y-2">
+      <div className="max-w-6xl mx-auto px-4 py-12 space-y-8">
+        <div className="text-center space-y-3">
           <p className="text-sm font-semibold text-purple-700 uppercase tracking-wide">{t('pricing.title')}</p>
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">{t('pricing.headline')}</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">{t('pricing.headline')}</h1>
           <p className="text-gray-600">{t('pricing.subtitle')}</p>
-          <p className="text-sm text-gray-500 max-w-3xl mx-auto">{copy.intro}</p>
+          <p className="text-sm text-gray-500 max-w-4xl mx-auto leading-relaxed">{copy.intro}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 xl:grid-cols-4 xl:gap-10">
           {copy.plans.map((plan) => (
             <div
               key={plan.key}
-              className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 flex flex-col space-y-4"
+              className="bg-white rounded-2xl shadow-lg border border-gray-100 p-7 flex flex-col space-y-5"
             >
               <div className="flex items-baseline justify-between">
                 <h2 className="text-xl font-semibold text-gray-900">{plan.name}</h2>
@@ -290,14 +290,14 @@ const PricingPage = () => {
                   {plan.duration}
                 </span>
               </div>
-              <div className="text-3xl font-bold text-gray-900">{plan.price}</div>
+              <div className="text-3xl font-bold text-gray-900 leading-tight">{plan.price}</div>
               <p className="text-sm text-gray-600">{plan.limit}</p>
-              <ul className="list-disc pl-5 text-gray-700 space-y-2 flex-1">
+              <ul className="list-disc pl-5 text-gray-700 space-y-2.5 flex-1">
                 {plan.features.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-              <button className="mt-auto w-full bg-gradient-to-r from-purple-600 to-teal-500 text-white font-semibold py-3 rounded-xl hover:shadow-md transition">
+              <button className="mt-auto w-full bg-gradient-to-r from-purple-600 to-teal-500 text-white font-semibold py-3 rounded-xl hover:shadow-lg transition">
                 {t('pricing.choose')}
               </button>
             </div>
