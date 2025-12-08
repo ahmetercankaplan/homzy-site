@@ -70,6 +70,61 @@ const resources = {
         unlimited: 'Unlimited',
         choose: 'Choose Plan'
       },
+      pricingPlans: {
+        intro: 'Homzy offers digital listing plans for property ads across Europe. We do not sell or broker properties; each plan is a digital service that activates after successful payment.',
+        basic: {
+          name: 'Basic Plan',
+          price: '£0 / €0',
+          duration: '30 days',
+          limit: 'Up to 1 active listing',
+          features: [
+            'Standard placement in search and category results',
+            'Basic listing management dashboard',
+            'Visibility included during the plan duration',
+            'Support for GBP and EUR billing',
+            'Digital service only; no physical products or brokerage'
+          ]
+        },
+        premium: {
+          name: 'Premium Plan',
+          price: '£9.99 / €9.99',
+          duration: '60 days',
+          limit: 'Up to 3 active listings',
+          features: [
+            'Increased visibility (highlighted or featured spots)',
+            'Premium badge on listings',
+            'Listing management dashboard access',
+            'Better ranking across search results',
+            'Digital service only; no physical products or real-estate intermediation'
+          ]
+        },
+        professional: {
+          name: 'Professional Plan',
+          price: '£29.00 / €29.00',
+          duration: '90 days',
+          limit: 'Up to 10 active listings',
+          features: [
+            'Top or featured placement in search and categories',
+            'Advanced visibility options',
+            'Performance statistics and analytics',
+            'Improved ranking and badges',
+            'Digital service only; no physical goods; no brokerage'
+          ]
+        },
+        unlimited: {
+          name: 'Pro Unlimited (Subscription)',
+          price: '£59.00 / €59.00 per month',
+          duration: 'Monthly subscription',
+          limit: 'Unlimited active listings during subscription',
+          features: [
+            'Highest visibility level and all premium features',
+            'Full analytics and reporting',
+            'Priority support',
+            'Recurring digital subscription service',
+            'No physical products and no brokerage services'
+          ]
+        }
+      },
       filters: {
         filters: 'Filters',
         location: 'Location',
@@ -260,6 +315,61 @@ const resources = {
         maxListings: 'Maksimum aktif ilan',
         unlimited: 'Sınırsız',
         choose: 'Planı Seç'
+      },
+      pricingPlans: {
+        intro: 'Homzy, Avrupa genelinde gayrimenkul ilanları için dijital planlar sunar. Mülk satışı veya aracılık yapmayız; her plan, ödeme sonrası otomatik aktive edilen dijital bir hizmettir.',
+        basic: {
+          name: 'Basic Plan',
+          price: '£0 / €0',
+          duration: '30 gün',
+          limit: 'En fazla 1 aktif ilan',
+          features: [
+            'Arama ve kategorilerde standart konum',
+            'Temel ilan yönetim paneli',
+            'Plan süresi boyunca görünürlük',
+            'GBP ve EUR faturalama desteği',
+            'Sadece dijital hizmet; fiziksel ürün veya aracılık yok'
+          ]
+        },
+        premium: {
+          name: 'Premium Plan',
+          price: '£9.99 / €9.99',
+          duration: '60 gün',
+          limit: 'En fazla 3 aktif ilan',
+          features: [
+            'Artırılmış görünürlük (öne çıkarma / featured alanlar)',
+            'İlanlarda Premium rozeti',
+            'İlan yönetim paneli erişimi',
+            'Arama sonuçlarında daha iyi sıralama',
+            'Sadece dijital hizmet; fiziksel ürün veya emlak aracılığı yok'
+          ]
+        },
+        professional: {
+          name: 'Professional Plan',
+          price: '£29.00 / €29.00',
+          duration: '90 gün',
+          limit: 'En fazla 10 aktif ilan',
+          features: [
+            'Arama ve kategorilerde üst / featured konumlar',
+            'Gelişmiş görünürlük seçenekleri',
+            'Performans istatistikleri ve analitik',
+            'Gelişmiş sıralama ve rozetler',
+            'Sadece dijital hizmet; fiziksel ürün veya aracılık yok'
+          ]
+        },
+        unlimited: {
+          name: 'Pro Unlimited (Abonelik)',
+          price: '£59.00 / €59.00 aylık',
+          duration: 'Aylık abonelik',
+          limit: 'Abonelik süresince sınırsız aktif ilan',
+          features: [
+            'En yüksek görünürlük ve tüm premium özellikler',
+            'Tam analitik ve raporlama',
+            'Öncelikli destek',
+            'Tekrarlayan dijital abonelik hizmeti',
+            'Fiziksel ürün veya aracılık hizmeti yok'
+          ]
+        }
       },
       filters: {
         filters: 'Filtreler',
