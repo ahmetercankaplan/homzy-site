@@ -44,7 +44,7 @@ const Footer = () => {
 
           <div>
             <h3 className="font-semibold mb-4">Contact</h3>
-            <p className="text-gray-400 text-sm">Email: info@homzy.com</p>
+            <p className="text-gray-400 text-sm">Email: support@homzy.site</p>
           </div>
         </div>
 

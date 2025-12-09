@@ -25,7 +25,7 @@ const CookiePage = () => {
               'Marketing/advertising: if used, measure campaigns and show relevant messages; may be set by third-party tools and rely on your consent.',
             ]}
             controls="You can block or delete cookies in your browser settings and, where available, through our on-site cookie banner or preference tool. You may withdraw consent for analytics/marketing cookies at any time; essential cookies are required for the site to function."
-            contact="support@homzy.com"
+            contact="support@homzy.site"
             categoryLabel="Cookie categories"
             controlsLabel="Controls and consent"
           />
@@ -40,7 +40,7 @@ const CookiePage = () => {
               'Marketing/Werbung: falls eingesetzt, messen Kampagnen und zeigen relevante Hinweise; koennen von Dritttools stammen und beruhen auf Ihrer Einwilligung.',
             ]}
             controls="Sie koennen Cookies im Browser blockieren oder loeschen und, falls verfuegbar, ueber unser Cookie-Banner oder das Praeferenz-Tool steuern. Sie koennen Ihre Einwilligung fuer Analyse-/Marketing-Cookies jederzeit widerrufen; unbedingt erforderliche Cookies sind fuer den Betrieb notwendig."
-            contact="support@homzy.com"
+            contact="support@homzy.site"
             categoryLabel="Cookie-Kategorien"
             controlsLabel="Steuerung und Einwilligung"
           />
@@ -55,7 +55,7 @@ const CookiePage = () => {
               'Marketing/publicite : le cas echeant, mesurent les campagnes et affichent des messages pertinents; peuvent provenir d outils tiers et reposent sur votre consentement.',
             ]}
             controls="Vous pouvez bloquer ou supprimer les cookies via les parametres du navigateur et, lorsque disponible, via notre bandeau ou outil de preference. Vous pouvez retirer votre consentement aux cookies d analytique/marketing a tout moment; les cookies strictement necessaires sont indispensables au fonctionnement du site."
-            contact="support@homzy.com"
+            contact="support@homzy.site"
             categoryLabel="Categories de cookies"
             controlsLabel="Controles et consentement"
           />
@@ -70,7 +70,7 @@ const CookiePage = () => {
               'Pazarlama/reklam: kullanilirsa kampanyalari olcer ve ilgili mesajlar gosterir; ucuncu taraf araclardan gelebilir ve onayiniza dayanir.',
             ]}
             controls="Cerezleri tarayici ayarlarinizdan engelleyebilir veya silebilirsiniz ve mevcutsa site ici cerez bandi veya tercihler araciligiyla yonetebilirsiniz. Analitik/pazarlama cerezlerine verdiginiz onayi istediginiz zaman geri cekebilirsiniz; zorunlu cerezler sitenin calismasi icin gereklidir."
-            contact="support@homzy.com"
+            contact="support@homzy.site"
             categoryLabel="Cerez kategorileri"
             controlsLabel="Kontroller ve riza"
           />

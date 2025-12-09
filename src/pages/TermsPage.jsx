@@ -51,10 +51,7 @@ const TermsPage = () => {
                 h: 'Changes',
                 t: 'We may update these terms; the latest version on the site applies and continued use means acceptance.',
               },
-              {
-                h: 'Contact',
-                t: 'support@homzy.com',
-              },
+              { h: 'Contact', t: 'support@homzy.site' },
             ]}
           />
 
@@ -70,7 +67,7 @@ const TermsPage = () => {
               { h: 'Haftung', t: 'Keine Haftung für indirekte Schäden, Gewinn- oder Datenverlust oder Streitigkeiten/Transaktionen zwischen Nutzern.' },
               { h: 'Kündigung', t: 'Sperrung/Beendigung bei Verstößen, Missbrauch oder Betrug möglich.' },
               { h: 'Änderungen', t: 'Aktualisierte Bedingungen auf der Website gelten; weitere Nutzung bedeutet Zustimmung.' },
-              { h: 'Kontakt', t: 'support@homzy.com' },
+              { h: 'Kontakt', t: 'support@homzy.site' },
             ]}
           />
 
@@ -86,7 +83,7 @@ const TermsPage = () => {
               { h: 'Responsabilité', t: 'Aucune responsabilité pour les dommages indirects, pertes de profits, pertes de données, ni pour les litiges/transactions entre utilisateurs.' },
               { h: 'Résiliation', t: 'Suspension ou clôture en cas de violation, abus ou fraude.' },
               { h: 'Modifications', t: 'La version publiée la plus récente s’applique; l’usage continu vaut acceptation.' },
-              { h: 'Contact', t: 'support@homzy.com' },
+              { h: 'Contact', t: 'support@homzy.site' },
             ]}
           />
 
@@ -102,7 +99,7 @@ const TermsPage = () => {
               { h: 'Sorumluluk sınırı', t: 'Dolaylı zararlar, kâr veya veri kaybı ya da kullanıcılar arasındaki anlaşmazlık ve işlemlerden sorumlu değiliz.' },
               { h: 'Fesih', t: 'İhlal, kötüye kullanım veya dolandırıcılık durumunda hesap askıya alınabilir veya sonlandırılabilir.' },
               { h: 'Koşul değişiklikleri', t: 'Güncel sürüm sitede yayımlanır; kullanmaya devam etmek kabul anlamına gelir.' },
-              { h: 'İletişim', t: 'support@homzy.com' },
+              { h: 'İletişim', t: 'support@homzy.site' },
             ]}
           />
         </div>

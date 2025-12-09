@@ -15,7 +15,7 @@ const RefundPage = () => {
             'After investigation, if the service was not delivered or was significantly defective, we may, at our discretion, offer a full refund, partial refund, plan extension, or re-activation/equivalent access.',
             'Fraudulent or abusive refund/chargeback behavior may result in suspension or termination of your account.',
             'This policy applies only to digital services; no physical goods or brokerage are provided.',
-            'Contact: support@homzy.com',
+            'Contact: support@homzy.site',
           ]}
         />
 
@@ -27,7 +27,7 @@ const RefundPage = () => {
             'Nach Prüfung können wir nach Ermessen vollständige/teilweise Erstattung, Laufzeitverlängerung oder erneute Aktivierung/gleichwertigen Zugang anbieten, wenn der Dienst nicht geliefert oder erheblich mangelhaft war.',
             'Betrügerisches oder missbräuchliches Refund-/Chargeback-Verhalten kann zur Sperrung oder Kündigung des Kontos führen.',
             'Gilt ausschließlich für digitale Dienste; keine physischen Waren oder Maklertätigkeit.',
-            'Kontakt: support@homzy.com',
+            'Kontakt: support@homzy.site',
           ]}
         />
 
@@ -39,7 +39,7 @@ const RefundPage = () => {
             'Après enquête, si le service n’a pas été délivré ou est gravement défaillant, nous pouvons, à notre discrétion, offrir un remboursement total/partiel, une extension de durée ou une réactivation/accès équivalent.',
             'Tout comportement frauduleux ou abusif de remboursement/chargeback peut entraîner la suspension ou la résiliation du compte.',
             'Cette politique concerne uniquement les services numériques; aucun bien physique ni courtage.',
-            'Contact : support@homzy.com',
+            'Contact : support@homzy.site',
           ]}
         />
 
@@ -51,7 +51,7 @@ const RefundPage = () => {
             'İnceleme sonrası hizmet teslim edilmemiş veya ciddi kusurlu ise, tamamen bizim takdirimizle tam/parsiyel iade, süre uzatma veya yeniden aktivasyon/denk erişim sağlayabiliriz.',
             'Hileli veya kötüye kullanılan iade/chargeback davranışı hesabın askıya alınmasına veya sonlandırılmasına yol açabilir.',
             'Bu politika yalnızca dijital hizmetler içindir; fiziksel ürün veya aracılık yoktur.',
-            'İletişim: support@homzy.com',
+            'İletişim: support@homzy.site',
           ]}
         />
       </div>
