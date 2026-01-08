@@ -75,13 +75,6 @@ const Navbar = () => {
               <Home className="w-4 h-4" />
               <span>{t('nav.home')}</span>
             </Link>
-            <Link
-              to="/pricing"
-              data-testid="nav-pricing"
-              className="text-gray-700 hover:text-purple-600 font-medium"
-            >
-              Pricing
-            </Link>
             {user && (
               <Link
                 to="/favorites"
@@ -164,9 +157,6 @@ const Navbar = () => {
                   {t('nav.favorites')}
                 </Link>
               )}
-              <Link to="/pricing" className="text-gray-700 hover:text-purple-600" onClick={() => setMenuOpen(false)}>
-                Pricing
-              </Link>
               {user && (
                 <Link to="/dashboard" className="text-gray-700 hover:text-purple-600" onClick={() => setMenuOpen(false)}>
                   {t('nav.dashboard')}

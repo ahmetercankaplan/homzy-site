@@ -180,9 +180,6 @@ const DashboardPage = () => {
                     {usage.active_listings} / {usage.max_active_listings === 0 ? '∞' : usage.max_active_listings}
                   </p>
                 </div>
-                <Button size="sm" variant="outline" onClick={() => navigate('/pricing')}>
-                  Upgrade plan
-                </Button>
               </div>
             )}
           </div>

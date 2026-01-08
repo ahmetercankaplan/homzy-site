@@ -24,9 +24,6 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Legal</h3>
             <div className="space-y-2">
-              <Link to="/pricing" className="block text-gray-400 hover:text-white transition-colors">
-                Pricing
-              </Link>
               <Link to="/privacy" data-testid="footer-privacy-link" className="block text-gray-400 hover:text-white transition-colors">
                 {t('footer.privacy')}
               </Link>

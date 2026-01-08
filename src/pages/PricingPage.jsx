@@ -256,6 +256,7 @@ const copyByLocale = {
 
 const PricingPage = () => {
   const { t, i18n } = useTranslation();
+  const plansEnabled = false;
 
   const locale = useMemo(() => {
     const lang = (i18n.language || 'en').toLowerCase();
@@ -278,31 +279,40 @@ const PricingPage = () => {
           <p className="text-sm text-gray-500 leading-relaxed">{copy.intro}</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          {copy.plans.map((plan) => (
-            <div
-              key={plan.key}
-              className="bg-white rounded-2xl shadow-lg border border-gray-100 p-7 flex flex-col space-y-5 transition hover:shadow-xl"
-            >
-              <div className="flex items-baseline justify-between">
-                <h2 className="text-xl font-semibold text-gray-900">{plan.name}</h2>
-                <span className="text-xs font-semibold text-purple-700 bg-purple-50 px-3 py-1 rounded-full">
-                  {plan.duration}
-                </span>
+        {!plansEnabled && (
+          <div className="text-center bg-white border border-dashed border-purple-200 rounded-2xl p-10 shadow-sm">
+            <p className="text-lg font-semibold text-gray-900 mb-2">Plans are currently unavailable.</p>
+            <p className="text-sm text-gray-600">We’ll reopen plan selection and payments soon.</p>
+          </div>
+        )}
+
+        {plansEnabled && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+            {copy.plans.map((plan) => (
+              <div
+                key={plan.key}
+                className="bg-white rounded-2xl shadow-lg border border-gray-100 p-7 flex flex-col space-y-5 transition hover:shadow-xl"
+              >
+                <div className="flex items-baseline justify-between">
+                  <h2 className="text-xl font-semibold text-gray-900">{plan.name}</h2>
+                  <span className="text-xs font-semibold text-purple-700 bg-purple-50 px-3 py-1 rounded-full">
+                    {plan.duration}
+                  </span>
+                </div>
+                <div className="text-3xl font-bold text-gray-900 leading-tight">{plan.price}</div>
+                <p className="text-sm text-gray-600">{plan.limit}</p>
+                <ul className="list-disc pl-5 text-gray-700 space-y-2.5 flex-1">
+                  {plan.features.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+                <button className="mt-auto w-full bg-gradient-to-r from-purple-600 to-teal-500 text-white font-semibold py-3 rounded-xl hover:shadow-lg transition">
+                  {t('pricing.choose')}
+                </button>
               </div>
-              <div className="text-3xl font-bold text-gray-900 leading-tight">{plan.price}</div>
-              <p className="text-sm text-gray-600">{plan.limit}</p>
-              <ul className="list-disc pl-5 text-gray-700 space-y-2.5 flex-1">
-                {plan.features.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-              <button className="mt-auto w-full bg-gradient-to-r from-purple-600 to-teal-500 text-white font-semibold py-3 rounded-xl hover:shadow-lg transition">
-                {t('pricing.choose')}
-              </button>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
       <Footer />
     </div>
