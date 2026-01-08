@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 import './App.css';
@@ -15,6 +15,7 @@ import TermsPage from './pages/TermsPage';
 import CookiePage from './pages/CookiePage';
 import PricingPage from './pages/PricingPage';
 import RefundPage from './pages/RefundPage';
+import AuthPage from './pages/AuthPage';
 import { useAuthStore } from './store';
 import { Toaster } from './components/ui/sonner';
 import CookieConsent from './components/CookieConsent';
@@ -28,29 +29,10 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const hash = window.location.hash;
-    const params = new URLSearchParams(hash.substring(1));
-    const sessionId = params.get('session_id');
-
-    if (sessionId) {
-      setLoading(true);
-      axios.post(`${API}/auth/session`, {}, {
-        headers: { 'X-Session-ID': sessionId }
-      })
-      .then(res => {
-        setUser(res.data.user);
-        window.history.replaceState({}, document.title, window.location.pathname);
-      })
-      .catch(err => console.error('Session creation failed:', err))
-      .finally(() => setLoading(false));
-    } else {
-      axios.get(`${API}/auth/me`)
+    axios.get(`${API}/auth/me`)
       .then(res => setUser(res.data.user))
-      .catch(() => {
-        logout();
-      })
+      .catch(() => logout())
       .finally(() => setLoading(false));
-    }
   }, [setUser, logout]);
 
   if (loading) {
@@ -77,6 +59,7 @@ function App() {
           <Route path="/cookies" element={<CookiePage />} />
           <Route path="/refund" element={<RefundPage />} />
           <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/auth" element={<AuthPage />} />
         </Routes>
         <Toaster position="top-right" />
         <CookieConsent />

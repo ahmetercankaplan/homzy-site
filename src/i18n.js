@@ -149,9 +149,21 @@ const resources = {
         emptyDesc: 'Start saving properties to see them here'
       },
       auth: {
-        signIn: 'Sign in with Google',
+        signIn: 'Sign in',
         signInTitle: 'Welcome to Homzy',
-        signInDesc: 'Sign in to save favorites and manage viewings'
+        signInDesc: 'Access your account to save favorites and manage viewings',
+        registerTitle: 'Create your account',
+        registerDesc: 'Access all features with your Homzy account',
+        email: 'Email',
+        name: 'Name',
+        password: 'Password',
+        register: 'Register',
+        noAccount: 'No account yet?',
+        haveAccount: 'Already have an account?',
+        loggedIn: 'Signed in successfully',
+        registered: 'Account created and signed in',
+        error: 'Something went wrong',
+        loading: 'Please wait...'
       },
       footer: {
         tagline: "Find the space you'll love living in",
@@ -395,9 +407,21 @@ const resources = {
         emptyDesc: 'Burada görmek için gayrimenkulleri kaydetmeye başlayın'
       },
       auth: {
-        signIn: 'Google ile giriş yap',
+        signIn: 'Giriş yap',
         signInTitle: 'Homzy\'ye Hoş Geldiniz',
-        signInDesc: 'Favorileri kaydetmek ve görüşmeleri yönetmek için giriş yapın'
+        signInDesc: 'Favorileri kaydetmek ve görüşmeleri yönetmek için hesabına giriş yap',
+        registerTitle: 'Hesap oluştur',
+        registerDesc: 'Tüm özelliklere Homzy hesabıyla erişin',
+        email: 'E-posta',
+        name: 'İsim',
+        password: 'Şifre',
+        register: 'Kayıt ol',
+        noAccount: 'Hesabın yok mu?',
+        haveAccount: 'Zaten hesabın var mı?',
+        loggedIn: 'Başarıyla giriş yaptın',
+        registered: 'Hesap oluşturuldu ve giriş yapıldı',
+        error: 'Bir hata oluştu',
+        loading: 'Lütfen bekleyin...'
       },
       footer: {
         tagline: 'Yaşamayı seveceğiniz alanı bulun',
@@ -586,9 +610,21 @@ const resources = {
         emptyDesc: 'Ajoutez des propriétés pour les voir ici'
       },
       auth: {
-        signIn: 'Se connecter avec Google',
+        signIn: 'Se connecter',
         signInTitle: 'Bienvenue sur Homzy',
-        signInDesc: 'Connectez-vous pour enregistrer des favoris et gérer les visites'
+        signInDesc: 'Connectez-vous pour enregistrer des favoris et gérer les visites',
+        registerTitle: 'Créer votre compte',
+        registerDesc: 'Accédez à toutes les fonctionnalités avec votre compte Homzy',
+        email: 'E-mail',
+        name: 'Nom',
+        password: 'Mot de passe',
+        register: 'Créer un compte',
+        noAccount: 'Pas encore de compte ?',
+        haveAccount: 'Vous avez déjà un compte ?',
+        loggedIn: 'Connexion réussie',
+        registered: 'Compte créé et connecté',
+        error: 'Une erreur est survenue',
+        loading: 'Veuillez patienter...'
       },
       footer: {
         tagline: 'Trouvez l’espace dans lequel vous aimerez vivre',
@@ -777,9 +813,21 @@ const resources = {
         emptyDesc: 'Speichern Sie Immobilien, um sie hier zu sehen'
       },
       auth: {
-        signIn: 'Mit Google anmelden',
+        signIn: 'Anmelden',
         signInTitle: 'Willkommen bei Homzy',
-        signInDesc: 'Melden Sie sich an, um Favoriten zu speichern und Besichtigungen zu verwalten'
+        signInDesc: 'Melden Sie sich an, um Favoriten zu speichern und Besichtigungen zu verwalten',
+        registerTitle: 'Konto erstellen',
+        registerDesc: 'Nutzen Sie alle Funktionen mit Ihrem Homzy-Konto',
+        email: 'E-Mail',
+        name: 'Name',
+        password: 'Passwort',
+        register: 'Registrieren',
+        noAccount: 'Noch kein Konto?',
+        haveAccount: 'Bereits ein Konto?',
+        loggedIn: 'Erfolgreich angemeldet',
+        registered: 'Konto erstellt und angemeldet',
+        error: 'Etwas ist schiefgelaufen',
+        loading: 'Bitte warten...'
       },
       footer: {
         tagline: 'Finden Sie den Raum, in dem Sie gerne leben werden',

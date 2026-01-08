@@ -17,9 +17,8 @@ import { API_BASE_URL as API } from '../lib/api';
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
-  const { user, setUser, logout: logoutStore } = useAuthStore();
+  const { user, logout: logoutStore } = useAuthStore();
   const navigate = useNavigate();
-  const devAuthEnabled = process.env.REACT_APP_ENABLE_DEV_LOGIN !== 'false';
   const [menuOpen, setMenuOpen] = React.useState(false);
 
   const handleLogout = async () => {
@@ -43,25 +42,6 @@ const Navbar = () => {
     { code: 'fr-FR', label: 'French' },
     { code: 'de-DE', label: 'German' }
   ];
-
-  const handleGoogleLogin = () => {
-    const redirectUrl = encodeURIComponent(`${window.location.origin}/search`);
-    window.location.href = `https://auth.emergentagent.com/?redirect=${redirectUrl}`;
-  };
-
-  const handleDevLogin = async () => {
-    if (!devAuthEnabled) return;
-    const email = window.prompt('Dev login email');
-    if (!email) return;
-    const name = window.prompt('Name', email.split('@')[0] || 'Homzy User') || email;
-    try {
-      const res = await axios.post(`${API}/auth/dev-login`, { email, name });
-      setUser(res.data.user);
-      toast.success('Signed in (dev)');
-    } catch (error) {
-      toast.error('Dev login failed');
-    }
-  };
 
   return (
     <nav data-testid="main-navbar" className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm">
@@ -161,21 +141,13 @@ const Navbar = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
             ) : (
-              <div className="flex items-center space-x-2">
-                {devAuthEnabled && (
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={handleDevLogin}
-                    data-testid="dev-login-button"
-                  >
-                    Dev Login
-                  </Button>
-                )}
-                <Button onClick={handleGoogleLogin} data-testid="login-button" className="bg-gradient-to-r from-purple-500 to-teal-500 hover:from-purple-600 hover:to-teal-600">
-                  {t('nav.login')}
-                </Button>
-              </div>
+              <Button
+                onClick={() => navigate('/auth')}
+                data-testid="login-button"
+                className="bg-gradient-to-r from-purple-500 to-teal-500 hover:from-purple-600 hover:to-teal-600"
+              >
+                {t('nav.login')}
+              </Button>
             )}
           </div>
         </div>
@@ -227,14 +199,7 @@ const Navbar = () => {
                 </Button>
               ) : (
                 <Button
-                  onClick={() => {
-                    if (devAuthEnabled) {
-                      handleDevLogin();
-                    } else {
-                      handleGoogleLogin();
-                    }
-                    setMenuOpen(false);
-                  }}
+                  onClick={() => { navigate('/auth'); setMenuOpen(false); }}
                   size="sm"
                   className="bg-gradient-to-r from-purple-500 to-teal-500 hover:from-purple-600 hover:to-teal-600"
                 >
