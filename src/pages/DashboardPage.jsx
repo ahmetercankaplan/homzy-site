@@ -163,19 +163,19 @@ const DashboardPage = () => {
             <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-teal-400 rounded-xl flex items-center justify-center">
               <Building2 className="w-6 h-6 text-white" />
             </div>
-            <h1 data-testid="dashboard-title" className="text-4xl font-bold text-gray-900">My Dashboard</h1>
+            <h1 data-testid="dashboard-title" className="text-4xl font-bold text-gray-900">{t('dashboard.title')}</h1>
           </div>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-            <p className="text-gray-600 text-lg">Manage your property listings</p>
+            <p className="text-gray-600 text-lg">{t('dashboard.subtitle', 'Manage your property listings')}</p>
             {usage && (
               <div className="bg-white shadow-sm rounded-xl px-4 py-3 border border-gray-100 flex items-center space-x-3">
                 <div>
-                  <p className="text-sm text-gray-500">Plan</p>
+                  <p className="text-sm text-gray-500">{t('dashboard.planLabel', 'Plan')}</p>
                   <p className="font-semibold text-gray-900">{usage.plan.name}</p>
                 </div>
                 <div className="h-10 w-px bg-gray-200" />
                 <div>
-                  <p className="text-sm text-gray-500">Active listings</p>
+                  <p className="text-sm text-gray-500">{t('dashboard.activeListings', 'Active listings')}</p>
                   <p className="font-semibold text-gray-900">
                     {usage.active_listings} / {usage.max_active_listings === 0 ? '∞' : usage.max_active_listings}
                   </p>
@@ -187,10 +187,10 @@ const DashboardPage = () => {
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="grid w-full max-w-md grid-cols-2 mb-8">
-            <TabsTrigger value="myListings" data-testid="my-listings-tab">My Listings</TabsTrigger>
+            <TabsTrigger value="myListings" data-testid="my-listings-tab">{t('dashboard.myListings')}</TabsTrigger>
             <TabsTrigger value="addListing" data-testid="add-listing-tab">
               <Plus className="w-4 h-4 mr-2" />
-              Add Listing
+              {t('dashboard.addListing')}
             </TabsTrigger>
           </TabsList>
 
@@ -215,14 +215,14 @@ const DashboardPage = () => {
                 className="text-center py-20 bg-white rounded-2xl shadow-lg"
               >
                 <Building2 className="w-24 h-24 text-gray-300 mx-auto mb-6" />
-                <h2 className="text-2xl font-bold text-gray-900 mb-3">No listings yet</h2>
-                <p className="text-gray-600 mb-8">Create your first property listing to get started</p>
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">{t('dashboard.noListings')}</h2>
+                <p className="text-gray-600 mb-8">{t('dashboard.addFirstListing')}</p>
                 <Button
                   onClick={() => setActiveTab('addListing')}
                   className="bg-gradient-to-r from-purple-500 to-teal-500 hover:from-purple-600 hover:to-teal-600"
                 >
                   <Plus className="w-4 h-4 mr-2" />
-                  Add Your First Listing
+                  {t('dashboard.addFirstListingButton', 'Add Your First Listing')}
                 </Button>
               </motion.div>
             ) : (

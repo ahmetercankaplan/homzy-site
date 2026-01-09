@@ -175,6 +175,7 @@ const resources = {
       },
       dashboard: {
         title: 'My Dashboard',
+        subtitle: 'Manage your property listings',
         myListings: 'My Listings',
         addListing: 'Add Listing',
         editListing: 'Edit Listing',
@@ -183,7 +184,10 @@ const resources = {
         deletedSuccess: 'Listing deleted successfully',
         areYouSureDelete: 'Are you sure you want to delete this listing? This action cannot be undone.',
         noListings: 'No listings yet',
-        addFirstListing: 'Create your first property listing to get started'
+        addFirstListing: 'Create your first property listing to get started',
+        addFirstListingButton: 'Add Your First Listing',
+        planLabel: 'Plan',
+        activeListings: 'Active listings'
       },
       listingForm: {
         details: 'Details',
@@ -470,6 +474,7 @@ const resources = {
       },
       dashboard: {
         title: 'Kontrol Panelim',
+        subtitle: 'İlanlarını yönet',
         myListings: 'İlanlarım',
         addListing: 'İlan Ekle',
         editListing: 'İlanı Düzenle',
@@ -478,7 +483,10 @@ const resources = {
         deletedSuccess: 'İlan başarıyla silindi',
         areYouSureDelete: 'Bu ilanı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.',
         noListings: 'Henüz ilan yok',
-        addFirstListing: 'Başlamak için ilk ilanınızı oluşturun'
+        addFirstListing: 'Başlamak için ilk ilanınızı oluşturun',
+        addFirstListingButton: 'İlk ilanını ekle',
+        planLabel: 'Plan',
+        activeListings: 'Aktif ilan'
       },
       listingForm: {
         details: 'Detaylar',
@@ -710,6 +718,7 @@ const resources = {
       },
       dashboard: {
         title: 'Mon Tableau de Bord',
+        subtitle: 'Gerez vos annonces immobilieres',
         myListings: 'Mes Annonces',
         addListing: 'Ajouter une Annonce',
         editListing: 'Modifier l’Annonce',
@@ -718,7 +727,11 @@ const resources = {
         deletedSuccess: 'Annonce supprimée avec succès',
         areYouSureDelete: 'Êtes-vous sûr de vouloir supprimer cette annonce ? Cette action est irréversible.',
         noListings: 'Aucune annonce pour le moment',
-        addFirstListing: 'Créez votre première annonce pour commencer'
+        addFirstListing: 'Créez votre première annonce pour commencer',
+        addFirstListingButton: 'Ajoutez votre première annonce',
+        planLabel: 'Forfait',
+        activeListings: 'Annonces actives',
+        subtitle: 'Gérez vos annonces immobilières'
       },
       listingForm: {
         details: 'Détails',
@@ -950,6 +963,7 @@ const resources = {
       },
       dashboard: {
         title: 'Mein Dashboard',
+        subtitle: 'Verwalten Sie Ihre Inserate',
         myListings: 'Meine Inserate',
         addListing: 'Inserat hinzufügen',
         editListing: 'Inserat bearbeiten',
@@ -958,7 +972,11 @@ const resources = {
         deletedSuccess: 'Inserat erfolgreich gelöscht',
         areYouSureDelete: 'Sind Sie sicher, dass Sie dieses Inserat löschen möchten? Dies kann nicht rückgängig gemacht werden.',
         noListings: 'Noch keine Inserate',
-        addFirstListing: 'Erstellen Sie Ihr erstes Inserat, um zu beginnen'
+        addFirstListing: 'Erstellen Sie Ihr erstes Inserat, um zu beginnen',
+        addFirstListingButton: 'Fügen Sie Ihr erstes Inserat hinzu',
+        planLabel: 'Tarif',
+        activeListings: 'Aktive Inserate',
+        subtitle: 'Verwalten Sie Ihre Inserate'
       },
       listingForm: {
         details: 'Details',
