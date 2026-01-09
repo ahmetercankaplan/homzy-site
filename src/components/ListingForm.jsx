@@ -17,7 +17,7 @@ import { API_BASE_URL as API } from '../lib/api';
 
 // UK + EU country whitelist
 const ALLOWED_COUNTRIES = {
-  GB: { name: 'United Kingdom', currency: 'GBP' },
+  GB: { name: 'United Kingdom', currency: 'EUR' },
   AT: { name: 'Austria', currency: 'EUR' },
   BE: { name: 'Belgium', currency: 'EUR' },
   BG: { name: 'Bulgaria', currency: 'EUR' },
@@ -48,7 +48,7 @@ const ALLOWED_COUNTRIES = {
 };
 
 const ListingForm = ({ editingListing, onSuccess, onCancel, publishDisabled = false, usage }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('details');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -60,7 +60,7 @@ const ListingForm = ({ editingListing, onSuccess, onCancel, publishDisabled = fa
     title: '',
     description: '',
     price: '',
-    currency: 'GBP',
+    currency: 'EUR',
     address: '',
     city: '',
     postcode: '',
@@ -324,7 +324,7 @@ const ListingForm = ({ editingListing, onSuccess, onCancel, publishDisabled = fa
               id="title"
               value={formData.title}
               onChange={(e) => handleChange('title', e.target.value)}
-              placeholder="Beautiful 2-bedroom apartment..."
+              placeholder={t('listingForm.placeholderTitle', 'Beautiful 2-bedroom apartment...')}
               className={errors.title ? 'border-red-500' : ''}
               data-testid="title-input"
             />
@@ -339,7 +339,7 @@ const ListingForm = ({ editingListing, onSuccess, onCancel, publishDisabled = fa
               id="description"
               value={formData.description}
               onChange={(e) => handleChange('description', e.target.value)}
-              placeholder="Describe your property in detail..."
+              placeholder={t('listingForm.placeholderDescription', 'Describe your property in detail...')}
               rows={6}
               className={errors.description ? 'border-red-500' : ''}
               data-testid="description-input"
@@ -357,7 +357,7 @@ const ListingForm = ({ editingListing, onSuccess, onCancel, publishDisabled = fa
                 type="number"
                 value={formData.price}
                 onChange={(e) => handleChange('price', e.target.value)}
-                placeholder="1500"
+                placeholder={t('listingForm.placeholderPrice', '1500')}
                 className={errors.price ? 'border-red-500' : ''}
                 data-testid="price-input"
               />
@@ -375,26 +375,25 @@ const ListingForm = ({ editingListing, onSuccess, onCancel, publishDisabled = fa
                 className="w-full h-10 border border-gray-200 rounded-lg px-3"
                 data-testid="currency-input"
               >
-                <option value="GBP">GBP</option>
                 <option value="EUR">EUR</option>
               </select>
-              <p className="text-xs text-gray-500 mt-1">Auto-set from country; you can choose EUR/GBP.</p>
+              <p className="text-xs text-gray-500 mt-1">{t('listingForm.currencyHint', 'Auto-set to EUR; you can adjust.')}</p>
             </div>
           </div>
 
           {/* Country */}
           <div>
-            <Label htmlFor="country">{t('listingForm.country', 'Country')} *</Label>
-            <Select value={formData.country} onValueChange={(value) => handleChange('country', value)}>
-              <SelectTrigger data-testid="country-select" className={errors.country ? 'border-red-500' : ''}>
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                {Object.entries(ALLOWED_COUNTRIES).map(([code, { name }]) => (
-                  <SelectItem key={code} value={code}>{name}</SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+          <Label htmlFor="country">{t('listingForm.country', 'Country')} *</Label>
+          <Select value={formData.country} onValueChange={(value) => handleChange('country', value)}>
+            <SelectTrigger data-testid="country-select" className={errors.country ? 'border-red-500' : ''}>
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              {Object.entries(ALLOWED_COUNTRIES).map(([code, { name }]) => (
+                <SelectItem key={code} value={code}>{t(`countryNames.${code}`, name)}</SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
             {errors.country && <p className="text-sm text-red-600 mt-1">{errors.country}</p>}
           </div>
 
@@ -406,7 +405,7 @@ const ListingForm = ({ editingListing, onSuccess, onCancel, publishDisabled = fa
                 id="address"
                 value={formData.address}
                 onChange={(e) => handleChange('address', e.target.value)}
-                placeholder="123 Main Street"
+                placeholder={t('listingForm.placeholderAddress', '123 Main Street')}
                 className={errors.address ? 'border-red-500' : ''}
                 data-testid="address-input"
               />
@@ -418,7 +417,7 @@ const ListingForm = ({ editingListing, onSuccess, onCancel, publishDisabled = fa
                 id="city"
                 value={formData.city}
                 onChange={(e) => handleChange('city', e.target.value)}
-                placeholder="London"
+                placeholder={t('listingForm.placeholderCity', 'London')}
                 className={errors.city ? 'border-red-500' : ''}
                 data-testid="city-input"
               />
@@ -430,7 +429,7 @@ const ListingForm = ({ editingListing, onSuccess, onCancel, publishDisabled = fa
                 id="postcode"
                 value={formData.postcode}
                 onChange={(e) => handleChange('postcode', e.target.value)}
-                placeholder="SW1A 1AA"
+                placeholder={t('listingForm.placeholderPostcode', 'Postal code')}
                 data-testid="postcode-input"
               />
             </div>
